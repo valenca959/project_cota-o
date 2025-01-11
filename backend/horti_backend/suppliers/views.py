@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from suppliers.models import Supplier
+from suppliers.serializers import SupplierSerializer
+from rest_framework import ViewSet
 
-# Create your views here.
+class SupplierViewSet(ViewSet.ModelViewSet):
+    queryset = Supplier.objects.all()
+    serializer_class = SupplierSerializer
