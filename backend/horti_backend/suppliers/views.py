@@ -1,7 +1,8 @@
 from suppliers.models import Supplier
 from suppliers.serializers import SupplierSerializer
-from rest_framework import ViewSet
+from rest_framework import viewsets
 
-class SupplierViewSet(ViewSet.ModelViewSet):
+
+class SupplierViewSet(viewsets.ModelViewSet):
     queryset = Supplier.objects.all()
     serializer_class = SupplierSerializer
