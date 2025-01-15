@@ -1,12 +1,18 @@
+import { BrowserRouter as Router} from 'react-router-dom';
+
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 
 function App() {
   return (
-    <div >
-      <header className="App-header">
-        <p>APLICATIVO</p>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <main>
+        conteudo
+      </main>
+      <Footer />
+    </Router>
   );
 }
 
